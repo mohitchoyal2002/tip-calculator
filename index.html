@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-content">
+        <div class="bill-section">
+            <div class="title">Bill total</div>
+            <div class="input-container">
+                <span class="text">₹</span>
+                <input onkeyup="calculateBill()" type="text" class="bill-amount" placeholder="0.00">
+            </div>
+        </div>
+        <div class="tip-section">
+            <div class="title">Tip</div>
+            <div class="input-container">
+                <span class="text">%</span>
+                <input onkeyup="calculateBill()" type="text" class="tip-amount" placeholder="10">
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="left-sec">
+                <div class="title">People</div>
+                <div class="control">
+                    <button class ="splitButton" id = "minus" onclick="decrement()">
+                        <span class="btn-text">-</span>
+                    </button>
+
+                    <span class="split-amount" id="no-of-people">1</span>
+
+                    <button class ="splitButton" id = "plus" onclick="increment()">
+                        <span class="btn-text">+</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-sec">
+                <div class="total-container">
+                    <div class="title">Total per Person</div>
+                    <div class="total" id="perPersonTotal">₹<span class = "final">0.00</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
